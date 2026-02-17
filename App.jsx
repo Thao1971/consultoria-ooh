@@ -5,7 +5,7 @@ import {
 import { 
   TrendingUp, Map, Users, Target, ChevronRight, Menu, X, 
   LayoutDashboard, Building2, BarChart3, Briefcase, 
-  ArrowLeft, CheckCircle2, AlertTriangle, MonitorPlay,
+  ArrowLeft, ArrowRight, CheckCircle2, AlertTriangle, MonitorPlay,
   Sparkles, Bot, Send, Loader2, FileText, BookOpen, Printer,
   Coins, Landmark, Search, Clock, ShieldCheck, Globe, FileDown, Eye,
   Zap, BrainCircuit, MessageSquare, Layers, Radio, History,
@@ -130,7 +130,7 @@ Desde H2O defendemos que este crecimiento debe ir acompañado de una planificaci
     company: "Beyup", 
     keyPoint: "Visibilidad Real",
     tesis: "Pasar del OTS a la visibilidad real. La medición es la base de la inversión.",
-    fullContent: `El gran reto es la medición real. Ya no basta con el Opportunity to See (OTS); los anunciantes exigen datos de visibilidad comprobada. 
+    fullContent: `El gran resto es la medición real. Ya no basta con el Opportunity to See (OTS); los anunciantes exigen datos de visibilidad comprobada. 
 
 En Beyup trabajamos para que el DOOH hable el mismo lenguaje que otros medios digitales. La integración de tecnologías de tracking nos permite certificar qué ojos han estado realmente sobre la pantalla, eliminando la incertidumbre del medio exterior tradicional.`,
     tags: ["Métricas", "Certificación", "ROI"]
@@ -206,7 +206,7 @@ const ExpertsView = ({ onSelect }) => (
     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
       {allExpertInterviews.map((expert, i) => (
         <div 
-          key={i} 
+          key={expert.id || i} 
           onClick={() => onSelect(expert)}
           className="bg-white border border-slate-200 rounded-[32px] p-8 shadow-sm hover:shadow-xl hover:border-blue-500 transition-all duration-500 group relative overflow-hidden cursor-pointer"
         >
@@ -303,7 +303,7 @@ const DashboardView = () => (
       <div className="bg-white border rounded-[32px] p-8 group hover:border-blue-500 transition-all">
          <p className="text-[9px] font-black uppercase tracking-[0.2em] mb-2 text-slate-400 tracking-widest">M&A Deal</p>
          <h4 className="text-4xl font-black tracking-tighter italic font-sans uppercase leading-none text-slate-900">€115.0M</h4>
-         <p className="text-xs font-bold mt-4 text-slate-900 italic font-sans uppercase">Atresmedia Deal</p>
+         <p className="text-xs font-bold mt-4 text-slate-900 italic font-sans uppercase">Atresmedia Deal <ArrowRight size={12} className="inline ml-1" /></p>
       </div>
       <div className="bg-slate-900 text-white rounded-[32px] p-8 relative overflow-hidden group">
          <BrainCircuit className="absolute -right-4 -bottom-4 w-24 h-24 text-white/5 group-hover:scale-110 transition-transform" />
